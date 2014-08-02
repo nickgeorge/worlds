@@ -1,0 +1,1664 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"texturebu",
+				"textureBufferCache"
+			],
+			[
+				"poi",
+				"pointLike"
+			],
+			[
+				"thre",
+				"thresholdFunction"
+			],
+			[
+				"Collision",
+				"CollisionCondition"
+			],
+			[
+				"collision",
+				"collisionFunction"
+			],
+			[
+				"conj",
+				"conjugateViewOrientation"
+			],
+			[
+				"anch",
+				"anchorViewOrientation"
+			],
+			[
+				"THR",
+				"ThrowinGurnade"
+			],
+			[
+				"conju",
+				"conjugateUp"
+			],
+			[
+				"up",
+				"upOrientation"
+			],
+			[
+				"conjugate",
+				"conjugateRotation"
+			],
+			[
+				"loc",
+				"localToParentCoords"
+			],
+			[
+				"pa",
+				"partsToDraw"
+			],
+			[
+				"closest",
+				"closestEncounter"
+			],
+			[
+				"C",
+				"CollisionManager"
+			],
+			[
+				"col",
+				"collisionFunction"
+			],
+			[
+				"parentToLocal",
+				"parentToLocalCoords"
+			],
+			[
+				"advance",
+				"advanceBasics"
+			],
+			[
+				"advanc",
+				"advanceAndCompute"
+			],
+			[
+				"ro",
+				"rotY"
+			],
+			[
+				"mouseMove",
+				"onMouseMove"
+			],
+			[
+				"deltaV",
+				"deltaV"
+			],
+			[
+				"normal",
+				"normalVertexTextures"
+			],
+			[
+				"textureB",
+				"textureBuffer"
+			],
+			[
+				"generate",
+				"generateTextureBuffer"
+			],
+			[
+				"VER",
+				"vertexIndicies"
+			],
+			[
+				"health",
+				"healthBar"
+			],
+			[
+				"fn",
+				"front"
+			],
+			[
+				"prot",
+				"prototype"
+			],
+			[
+				"hidden",
+				"hiddenCanvas"
+			],
+			[
+				"by",
+				"byText"
+			],
+			[
+				"trans",
+				"transformedOffset"
+			],
+			[
+				"tex",
+				"textureBuffer"
+			],
+			[
+				"proto",
+				"proto	Prototype"
+			],
+			[
+				"Collis",
+				"CollisionManager"
+			],
+			[
+				"dis",
+				"distanceSquaredTo"
+			],
+			[
+				"is",
+				"isViewTransitioning"
+			],
+			[
+				"delat",
+				"deltaVInView"
+			],
+			[
+				"velocity",
+				"velocityInView"
+			],
+			[
+				"TextureBuffer",
+				"textureBufferCache"
+			],
+			[
+				"Tex",
+				"textureBufferCache"
+			],
+			[
+				"textureBuff",
+				"textureBufferCache"
+			],
+			[
+				"loaded",
+				"loadedColor"
+			],
+			[
+				"M",
+				"MAX_LEG_ANGLE"
+			],
+			[
+				"parent",
+				"parentToLocalTransform"
+			],
+			[
+				"play",
+				"playingWalking"
+			],
+			[
+				"pl",
+				"playingWalking"
+			],
+			[
+				"rotationT",
+				"rotationTransitionT"
+			],
+			[
+				"rotat",
+				"rotationTransitionT"
+			],
+			[
+				"tr",
+				"rotationTransitionT"
+			],
+			[
+				"rotati",
+				"rotating"
+			],
+			[
+				"ge",
+				"getNormal"
+			],
+			[
+				"toL",
+				"localToWorldCoords"
+			],
+			[
+				"disp",
+				"disposables"
+			],
+			[
+				"hero",
+				"heroVelocity_lc"
+			],
+			[
+				"world",
+				"worldToLocalCoords"
+			],
+			[
+				"DUMB",
+				"DUMB_CRATE_AND_HERO"
+			],
+			[
+				"CO",
+				"CollisionFunctions"
+			],
+			[
+				"pro",
+				"proto	Prototype"
+			],
+			[
+				"resgi",
+				"registerCollisionFunctions"
+			],
+			[
+				"localT",
+				"localToParentTransform"
+			],
+			[
+				"localToParent",
+				"localToParentRotation"
+			],
+			[
+				"interes",
+				"intersectionEncounter"
+			],
+			[
+				"closets",
+				"closestEncounter"
+			],
+			[
+				"threh",
+				"thresholdSquared"
+			],
+			[
+				"distanc",
+				"distanceSquared"
+			],
+			[
+				"textures",
+				"texturesByFace"
+			],
+			[
+				"H",
+				"HEIGHT"
+			],
+			[
+				"closes",
+				"closestEncounter"
+			],
+			[
+				"Points",
+				"pointsOfInterest"
+			],
+			[
+				"points",
+				"pointsOfInterest"
+			],
+			[
+				"po",
+				"prototype"
+			],
+			[
+				"draw",
+				"drawScene"
+			],
+			[
+				"to",
+				"toWorldCoords"
+			],
+			[
+				"rener",
+				"renderSelf"
+			],
+			[
+				"colli",
+				"collisionFunction"
+			],
+			[
+				"regist",
+				"registerCollisionType"
+			],
+			[
+				"register",
+				"registerCollisionTypes"
+			],
+			[
+				"her",
+				"heroListener"
+			],
+			[
+				"texture",
+				"textureCoordData"
+			],
+			[
+				"text",
+				"textureCoordData"
+			],
+			[
+				"exper",
+				"experimentArchive"
+			],
+			[
+				"exp",
+				"experimentArchive"
+			],
+			[
+				"intersection",
+				"intersectionPoints"
+			],
+			[
+				"inv",
+				"inverseBaseTransformation"
+			],
+			[
+				"opt",
+				"opt_axesToCheck"
+			],
+			[
+				"close",
+				"closestAxis"
+			],
+			[
+				"R",
+				"relativeCoord"
+			],
+			[
+				"ou",
+				"outerRadiusB"
+			],
+			[
+				"get",
+				"getOuterRadius"
+			],
+			[
+				"modelMat",
+				"modelMatrixStack"
+			],
+			[
+				"US",
+				"USE_UNIFORM_COLOR_DEFAULT"
+			],
+			[
+				"init",
+				"initBuffers"
+			],
+			[
+				"index",
+				"indexData"
+			],
+			[
+				"createShad",
+				"createShaderProgram"
+			],
+			[
+				"worldDo",
+				"worldDOTapplyLights"
+			],
+			[
+				"camera",
+				"cameraDOTtransorm"
+			],
+			[
+				"bookIn",
+				"bookInputMenu"
+			],
+			[
+				"bookinputm",
+				"bookInputMenu"
+			],
+			[
+				"bookM",
+				"bookInputMenu"
+			],
+			[
+				"block",
+				"bookBlockMenu"
+			],
+			[
+				"handleM",
+				"handleMenuPop"
+			],
+			[
+				"render",
+				"renderSelectedBooks"
+			],
+			[
+				"selected",
+				"selectedBookIds"
+			],
+			[
+				"selecte",
+				"selectedBookIds"
+			],
+			[
+				"delete",
+				"deleteFromBooks"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "star.js",
+			"settings":
+			{
+				"buffer_size": 2458,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "joozbill_world.js",
+			"settings":
+			{
+				"buffer_size": 1446,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 5471,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "joozbill_listener.js",
+			"settings":
+			{
+				"buffer_size": 825,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "border.js",
+			"settings":
+			{
+				"buffer_size": 534,
+				"line_ending": "Unix",
+				"name": "Square = function(message) {"
+			}
+		},
+		{
+			"file": "hero_ball.js",
+			"settings":
+			{
+				"buffer_size": 1600,
+				"line_ending": "Unix",
+				"name": "HeroBall = function(message) {"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+		],
+		"width": 442.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/nickgeorge/biologicalspeculation/worlds/joozbill/hero_ball.js",
+		"/Users/nickgeorge/biologicalspeculation/world2d/style.css",
+		"/Users/nickgeorge/biologicalspeculation/world2d/population/pane.js",
+		"/Users/nickgeorge/biologicalspeculation/world2d/population/../compressJS.sh",
+		"/Users/nickgeorge/biologicalspeculation/world2d/compressJS.sh",
+		"/Users/nickgeorge/world2d/animator.js",
+		"/Users/nickgeorge/biologicalspeculation/world2d/media/texture.js",
+		"/Users/nickgeorge/biologicalspeculation/world2d/ui/hud.js",
+		"/Users/nickgeorge/biologicalspeculation/world2d/gl-matrix/quat.js",
+		"/Users/nickgeorge/biologicalspeculation/world2d/ui/camera.js",
+		"/Users/nickgeorge/biologicalspeculation/world2d/population/light.js",
+		"/Users/nickgeorge/biologicalspeculation/world2d/util/util.js",
+		"/Users/nickgeorge/biologicalspeculation/world2d/population/leaf_thing.js",
+		"/Users/nickgeorge/biologicalspeculation/world2d/gl/shader_program.js",
+		"/Users/nickgeorge/biologicalspeculation/world2d/media/sounds/ow.mp3",
+		"/Users/nickgeorge/biologicalspeculation/world2d/media/sounds/metal_explosion.wav",
+		"/Users/nickgeorge/biologicalspeculation/world2d/media/sounds/pop.wav",
+		"/Users/nickgeorge/biologicalspeculation/world2d/util/framerate.js",
+		"/Users/nickgeorge/biologicalspeculation/world2d/media/sounds/click.wav",
+		"/Users/nickgeorge/biologicalspeculation/world2d/media/sound_manager.js",
+		"/Users/nickgeorge/biologicalspeculation/world2d/media/sounds/arrow.wav",
+		"/Users/nickgeorge/biologicalspeculation/world2d/gl-matrix/mat4.js",
+		"/Users/nickgeorge/biologicalspeculation/world2d/animator.js",
+		"/Users/nickgeorge/biologicalspeculation/world2d/population/thing.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/population/offset_container.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/index.html",
+		"/Users/nickgeorge/biologicalspeculation/quantum/ui/hud.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/input/hero_listener.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/media/texture.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/population/sun.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/population/thing.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/util/types.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/population/leaf_box.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/collision_manager.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/media/sound_manager.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/util/controlled_list.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/gl-matrix/vec3.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/population/walker.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/ui/camera.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/animator.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/gl/shader_program.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/population/leaf_thing.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/population/hero.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/population/throwin_gurnade.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/util/util.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/population/dumb_crate.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/gl/gl.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/world.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/effects/health_bar.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/util/quadratic.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/media/sounds/glass_short.wav",
+		"/Users/nickgeorge/biologicalspeculation/quantum/gl-matrix/common.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/population/box.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/style.css",
+		"/Users/nickgeorge/biologicalspeculation/quantum/gl/matrix_stack.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/walk.mp3",
+		"/Users/nickgeorge/biologicalspeculation/quantum/population/fella_like.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/population/fella.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/population/shelf.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/population/sphere.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/population/pane.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/util/cache.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/gl-matrix/extensions.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/population/bullet.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/media/images/energybwa2.png",
+		"/Users/nickgeorge/biologicalspeculation/quantum/population/gimble.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/util/key_code.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/gl-matrix/quat.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/population/offset_box.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/media/sounds/arrow_short.wav",
+		"/Users/nickgeorge/biologicalspeculation/quantum/media/images/adambw.png",
+		"/Users/nickgeorge/biologicalspeculation/quantum/util/encounter.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/media/images/green_plasma.jpg",
+		"/Users/nickgeorge/biologicalspeculation/quantum/population/(ui*vi)`  = (uf*vf)`",
+		"/Users/nickgeorge/biologicalspeculation/quantum/util/framerate.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/media/sounds/jump.mp3",
+		"/Users/nickgeorge/biologicalspeculation/quantum/media/images/jsPerf  JavaScript performance playground.html",
+		"/Users/nickgeorge/biologicalspeculation/quantum/gl-matrix/vec4.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/effects/pane_outline.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/media/sounds/click.wav",
+		"/Users/nickgeorge/biologicalspeculation/quantum/util/attitude.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/gl-matrix/mat4.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/media/sounds/ow.mp3",
+		"/Users/nickgeorge/biologicalspeculation/quantum/media/sounds/shu.mp3",
+		"/Users/nickgeorge/biologicalspeculation/quantum/media/sounds/baseball.wav",
+		"/Users/nickgeorge/biologicalspeculation/quantum/media/sounds/walk copy.mp3",
+		"/Users/nickgeorge/biologicalspeculation/quantum/media/sounds/pop_short.wav",
+		"/Users/nickgeorge/biologicalspeculation/quantum/media/sounds/pop.wav",
+		"/Users/nickgeorge/biologicalspeculation/quantum/population/bounding_sphere.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/util/vector.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/gl-matrix/mat3.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/media/sounds/walk.mp3",
+		"/Users/nickgeorge/biologicalspeculation/quantum/media/sounds/metal_explosion.wav",
+		"/Users/nickgeorge/biologicalspeculation/quantum/quantum.sublime-project",
+		"/Users/nickgeorge/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/nickgeorge/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/nickgeorge/Library/Application Support/Sublime Text 3/Packages/User/JavaScript.sublime-settings",
+		"/Users/nickgeorge/biologicalspeculation/quantum/todo",
+		"/Users/nickgeorge/biologicalspeculation/quantum/media/sounds/glass.wav",
+		"/Users/nickgeorge/biologicalspeculation/quantum/util/Find Results",
+		"/Users/nickgeorge/biologicalspeculation/quantum/Find Results",
+		"/Users/nickgeorge/biologicalspeculation/index.html",
+		"/Users/nickgeorge/biologicalspeculation/quantum/gl-matrix/mat2d.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/gl-matrix/mat2.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/shelf.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/media/sounds/cannon.wav",
+		"/Users/nickgeorge/biologicalspeculation/quantum/gl-matrix/vec2.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/population/light.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/effects/image_cross.js",
+		"/Users/nickgeorge/mount/rescore_task/google3/java/com/google/eval/unrated/server/RescoreContext.java",
+		"/Users/nickgeorge/mount/staging-link-in-bug/google3/blaze-google3",
+		"/Users/nickgeorge/mount/staging-link-in-bug/staging-link-in-bug.sublime-project",
+		"/Users/nickgeorge/biologicalspeculation/quantum/media/sounds/arrow.wav",
+		"/Users/nickgeorge/biologicalspeculation/quantum/util/direction.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/util/light.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/util/physics.js",
+		"/Users/nickgeorge/biologicalspeculation/style.css",
+		"/Users/nickgeorge/biologicalspeculation/quantum/population/Hero.js",
+		"/Users/nickgeorge/webgl/webgl-lessons/lesson11/index.html",
+		"/Users/nickgeorge/biologicalspeculation/quantum/gl/webgl-utils.js",
+		"/Users/nickgeorge/webgl/webgl-lessons/lesson11/sphere-triangles.png",
+		"/Users/nickgeorge/biologicalspeculation/quantum/effects/double_explosion.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/effects/explosion.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/population/vector.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/util/soyutils.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/util/jquery/1.10.2/jquery.min.js",
+		"/Users/nickgeorge/biologicalspeculation/quantum/index_.html",
+		"/Users/nickgeorge/biologicalspeculation/quantum/gl/glMatrix.js"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"width",
+			"0",
+			"70",
+			"this.aMa",
+			"+=",
+			"velocity",
+			"speed",
+			"isKeydownEvent",
+			"1",
+			"isKeydown",
+			"target",
+			"square",
+			"// -0.",
+			"// 0.",
+			" 0",
+			"StarsListener",
+			"init",
+			"49",
+			"gl.reset",
+			"clearCo",
+			"super",
+			"usecss",
+			"glom",
+			"SERVICE_URL",
+			",\n]",
+			",\n",
+			",",
+			",\\n",
+			"cull",
+			"addDrawable",
+			"advance",
+			"To",
+			"addthing",
+			"createInde",
+			"createTexture",
+			"textureBufferCache",
+			"verticies",
+			",g",
+			"glommable: false,\n",
+			"populate",
+			"collision",
+			"negatedAnchorPosition",
+			"negated",
+			"draw",
+			"requ",
+			"anim",
+			"pause",
+			"mouseIsLocked",
+			"isMouseLocked",
+			"pause",
+			"isMouseLocked",
+			"pause",
+			"new HeroListener",
+			"new herolistener",
+			"listener",
+			"her",
+			"herolist",
+			"world",
+			"rRoll",
+			"function(){}",
+			"registerCollisionCondition",
+			"ionss",
+			"registerCollisionFunction",
+			"collisionFunction",
+			"fn.",
+			"collisionFunctions",
+			"GRENADE_AND_FELLA",
+			"test",
+			"projectilesTo",
+			"remove",
+			"dispose",
+			"getViewOrientation",
+			"transform",
+			"\n\n\nControlledList.prototype.get = function(i) {\n  return this.elements[i];\n};",
+			"effects",
+			"glomedThings",
+			"thingsToA",
+			"addDrawableThing",
+			"populate",
+			"projectile",
+			"Projectile",
+			"thing",
+			"Thing",
+			"effectsToAdd",
+			"effect",
+			"projectilesToAdd",
+			"addDirectly_",
+			"addEffect",
+			"speed",
+			"addEffect",
+			"glom",
+			"distanceSquaredTo",
+			"squaredDistance",
+			"vec3.distanceSquared",
+			"FELLA_AND_BULLET",
+			"glom",
+			"draw",
+			"viewRotation",
+			"conjugateUp",
+			"velocity",
+			"damageMultiplier",
+			"boundTick",
+			"checkCollisions",
+			"distanceSquaredTo",
+			"getViewRotation",
+			"viewRotation",
+			"viewOrientation",
+			"getViewNormal",
+			"getViewNose",
+			"viewRotation",
+			"landed",
+			"getPart",
+			"isPart",
+			"distanceSquaredToCamera",
+			"damageMultiplier",
+			"glommable",
+			"groundOrientation",
+			"finalView",
+			"[]",
+			"viewRotation",
+			"ViewOrientation",
+			"viewOrientation",
+			"gimble",
+			"viewOrientation",
+			"2",
+			"transform",
+			"UNIFORM_SCALE_DEFAULT",
+			"setUniformScale"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"ViewRotation",
+			"viewRotation",
+			"RED_PLASMA",
+			"this.isRoot = true",
+			"newLineToOriginQuadratic",
+			"parentToLocalTransform",
+			"parentToLocalCoords",
+			"localToParentTransform",
+			"localToWorldCoords",
+			"localToWorldTransform",
+			"losestEncounter",
+			"asItself\\($1,$2\\)",
+			"asItself\\($1\\,$2\\)",
+			"asItself\\($1\\)",
+			"toLocalTransform",
+			"toWorldTransform",
+			"computeTransforms",
+			"toLocalßßCoords",
+			"toLocalCoords",
+			"toWorldCoords",
+			"normalMatrix",
+			"perspectiveMatrix",
+			"PI",
+			"π",
+			"gl.popModelMatrix",
+			"popModelMatrix",
+			"pushModelMatrix",
+			"gl.modelMatrixStack.push()",
+			"gl.modelMatrixStack.pop()",
+			"gl.modelMatrix.pop()",
+			"gl.modelMatrix.push();",
+			"gl.modelMatrix.push()",
+			"popModelMatrix",
+			"pushModelMatrix",
+			"modelMatrix",
+			"setYaw",
+			"rPitch",
+			"pitch",
+			"rYaw",
+			"yaw",
+			"PI",
+			"util"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "star.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2458,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								215,
+								215
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "joozbill_world.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1446,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								517,
+								517
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 207.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5471,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3689,
+								3689
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1655.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "joozbill_listener.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 825,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								511,
+								432
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 4,
+					"file": "border.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 534,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								197,
+								197
+							]
+						],
+						"settings":
+						{
+							"auto_name": "Square = function(message) {",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "joozbill_listener.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 825,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								453,
+								453
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "hero_ball.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1600,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								290,
+								290
+							]
+						],
+						"settings":
+						{
+							"auto_name": "HeroBall = function(message) {",
+							"history_list_is_closing": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "joozbill.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"jozl",
+				"joozbill_listener.js"
+			],
+			[
+				"inde",
+				"index.html"
+			],
+			[
+				"index",
+				"index.html"
+			],
+			[
+				"worl",
+				"joozbill_world.js"
+			],
+			[
+				"star",
+				"star.js"
+			],
+			[
+				"joozbillworld",
+				"joozbill_world.js"
+			],
+			[
+				"world2d",
+				"world2d.js"
+			],
+			[
+				"herolist",
+				"input/hero_listener.js"
+			],
+			[
+				"hud",
+				"ui/hud.js"
+			],
+			[
+				"gl",
+				"gl/gl.js"
+			],
+			[
+				"anima",
+				"animator.js"
+			],
+			[
+				"world",
+				"world.js"
+			],
+			[
+				"sphere",
+				"population/sphere.js"
+			],
+			[
+				"pane",
+				"population/pane.js"
+			],
+			[
+				"paneout",
+				"effects/pane_outline.js"
+			],
+			[
+				"fin",
+				"Find Results"
+			],
+			[
+				"leafthing",
+				"population/leaf_thing.js"
+			],
+			[
+				"thing",
+				"population/thing.js"
+			],
+			[
+				"box",
+				"population/box.js"
+			],
+			[
+				"thign",
+				"population/thing.js"
+			],
+			[
+				"camera",
+				"ui/camera.js"
+			],
+			[
+				"quat",
+				"gl-matrix/quat.js"
+			],
+			[
+				"leafth",
+				"population/leaf_thing.js"
+			],
+			[
+				"word",
+				"world.js"
+			],
+			[
+				"ox",
+				"population/box.js"
+			],
+			[
+				"css",
+				"style.css"
+			],
+			[
+				"media/",
+				"media/texture.js"
+			],
+			[
+				"camer",
+				"ui/camera.js"
+			],
+			[
+				"things",
+				"population/thing.js"
+			],
+			[
+				"light",
+				"population/light.js"
+			],
+			[
+				"styl",
+				"style.css"
+			],
+			[
+				"herol",
+				"input/hero_listener.js"
+			],
+			[
+				"herols",
+				"input/hero_listener.js"
+			],
+			[
+				"ani",
+				"animator.js"
+			],
+			[
+				"herolis",
+				"input/hero_listener.js"
+			],
+			[
+				"herolisten",
+				"input/hero_listener.js"
+			],
+			[
+				"coll",
+				"collision_manager.js"
+			],
+			[
+				"sun",
+				"population/sun.js"
+			],
+			[
+				"col",
+				"collision_manager.js"
+			],
+			[
+				"util",
+				"util/util.js"
+			],
+			[
+				"fella",
+				"population/fella.js"
+			],
+			[
+				"collisi",
+				"collision_manager.js"
+			],
+			[
+				"collis",
+				"collision_manager.js"
+			],
+			[
+				"types",
+				"util/types.js"
+			],
+			[
+				"bullet",
+				"population/bullet.js"
+			],
+			[
+				"hero",
+				"population/hero.js"
+			],
+			[
+				"walker",
+				"population/walker.js"
+			],
+			[
+				"healthbar",
+				"effects/health_bar.js"
+			],
+			[
+				"contro",
+				"util/controlled_list.js"
+			],
+			[
+				"control",
+				"util/controlled_list.js"
+			],
+			[
+				"vec3",
+				"gl-matrix/vec3.js"
+			],
+			[
+				"type",
+				"util/types.js"
+			],
+			[
+				"anim",
+				"animator.js"
+			],
+			[
+				"animato",
+				"animator.js"
+			],
+			[
+				"wold",
+				"world.js"
+			],
+			[
+				"throwin",
+				"population/throwin_gurnade.js"
+			],
+			[
+				"dumbcrate",
+				"population/dumb_crate.js"
+			],
+			[
+				"leafbox",
+				"population/leaf_box.js"
+			],
+			[
+				"waker",
+				"population/walker.js"
+			],
+			[
+				"heal",
+				"effects/health_bar.js"
+			],
+			[
+				"find",
+				"Find Results"
+			],
+			[
+				"gurn",
+				"population/throwin_gurnade.js"
+			],
+			[
+				"leaf",
+				"population/leaf_thing.js"
+			],
+			[
+				"shelf",
+				"population/shelf.js"
+			],
+			[
+				"con",
+				"collision_manager.js"
+			],
+			[
+				"gurna",
+				"population/throwin_gurnade.js"
+			],
+			[
+				"",
+				"population/throwin_gurnade.js"
+			],
+			[
+				"shader",
+				"gl/shader_program.js"
+			],
+			[
+				"shade",
+				"gl/shader_program.js"
+			],
+			[
+				"ind",
+				"index.html"
+			],
+			[
+				"throw",
+				"population/throwin_gurnade.js"
+			],
+			[
+				"texture",
+				"media/texture.js"
+			],
+			[
+				"text",
+				"media/texture.js"
+			],
+			[
+				"image",
+				"collision_manager.js"
+			],
+			[
+				"healthb",
+				"effects/health_bar.js"
+			],
+			[
+				"hing",
+				"population/thing.js"
+			],
+			[
+				"exten",
+				"gl-matrix/extensions.js"
+			],
+			[
+				"health",
+				"effects/health_bar.js"
+			],
+			[
+				"ke",
+				"util/key_code.js"
+			],
+			[
+				"key",
+				"util/key_code.js"
+			],
+			[
+				"keycode",
+				"util/key_code.js"
+			],
+			[
+				"herolistener",
+				"input/hero_listener.js"
+			],
+			[
+				"colli",
+				"collision_manager.js"
+			],
+			[
+				"leaft",
+				"population/leaf_thing.js"
+			],
+			[
+				"leafthg",
+				"population/leaf_thing.js"
+			],
+			[
+				"fi",
+				"Find Results"
+			],
+			[
+				"healh",
+				"effects/health_bar.js"
+			],
+			[
+				"colls",
+				"collision_manager.js"
+			],
+			[
+				"colis",
+				"collision_manager.js"
+			],
+			[
+				"healthba",
+				"effects/health_bar.js"
+			],
+			[
+				"gimble",
+				"population/gimble.js"
+			],
+			[
+				"vec4",
+				"gl-matrix/vec4.js"
+			],
+			[
+				"extne",
+				"gl-matrix/extensions.js"
+			],
+			[
+				"uti",
+				"util/util.js"
+			],
+			[
+				"animator",
+				"animator.js"
+			],
+			[
+				"fel",
+				"population/fella.js"
+			],
+			[
+				"framerat",
+				"util/framerate.js"
+			],
+			[
+				"mat4",
+				"gl-matrix/mat4.js"
+			],
+			[
+				"extn",
+				"gl-matrix/extensions.js"
+			],
+			[
+				"aniam",
+				"animator.js"
+			],
+			[
+				"offset",
+				"population/offset_container.js"
+			],
+			[
+				"framer",
+				"util/framerate.js"
+			],
+			[
+				"thing.js",
+				"population/thing.js"
+			],
+			[
+				"fell",
+				"population/fella.js"
+			],
+			[
+				"pae",
+				"population/pane.js"
+			],
+			[
+				"thing.",
+				"population/thing.js"
+			],
+			[
+				"bo",
+				"population/leaf_box.js"
+			],
+			[
+				"laef",
+				"population/leaf_box.js"
+			],
+			[
+				"giml",
+				"population/gimble.js"
+			],
+			[
+				"eafthing",
+				"population/leaf_thing.js"
+			],
+			[
+				"wolrd",
+				"world.js"
+			],
+			[
+				"ofsco",
+				"population/offset_container.js"
+			],
+			[
+				"offsetb",
+				"population/offset_box.js"
+			],
+			[
+				"dumc",
+				"population/dumb_crate.js"
+			],
+			[
+				"shaderpro",
+				"gl/shader_program.js"
+			],
+			[
+				"attit",
+				"util/attitude.js"
+			],
+			[
+				"attitude",
+				"util/attitude.js"
+			],
+			[
+				"vector",
+				"util/vector.js"
+			],
+			[
+				"exte",
+				"gl-matrix/extensions.js"
+			],
+			[
+				"ex",
+				"gl-matrix/extensions.js"
+			],
+			[
+				"cil",
+				"media/sounds/click.wav"
+			],
+			[
+				"offse",
+				"population/offset_container.js"
+			],
+			[
+				"off",
+				"population/offset_container.js"
+			],
+			[
+				"ofc",
+				"population/offset_container.js"
+			],
+			[
+				"ypes",
+				"util/types.js"
+			],
+			[
+				"lafth",
+				"population/leaf_thing.js"
+			],
+			[
+				"gimbl",
+				"population/gimble.js"
+			],
+			[
+				"un",
+				"untitled"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+		],
+		"width": 324.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 154.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
