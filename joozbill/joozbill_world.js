@@ -1,13 +1,15 @@
 JoozbillWorld = function() {
   util.base(this);
 
-  this.red = 0;
-  this.increasing = true;
-
   this.width = 150;
   this.height = 150;
 
   this.color = 0;
+
+  this.setBackgroundColor([0, 0, 0, 1]);
+
+  this.inputAdapter = new WorldInputAdapter().
+      setKeyHandler(this.onKey, this);
 
 };
 util.inherits(JoozbillWorld, World);
@@ -21,22 +23,10 @@ JoozbillWorld.prototype.advance = function(dt) {
 JoozbillWorld.prototype.populate = function() {
   util.base(this, 'populate');
 
-  // var box = new Box({
-  //   position: [0, 0, 0],
-  //   color: [1, 0, 0, 1],
-  //   size: [20, 4, 4],
-  //   velocity: [3, 3, 0],
-  //   // pitch: PI,
-  //   rRoll: PI
-  // });
-  // this.addThing(box);
-
   var sphere = new HeroBall({
     position: [0, 0, 0],
     color: [0, 1, 0, 1],
     radius: 2.5,
-    // velocity: [-10, 10, 0],
-    // rYaw: PI/2,
     rRoll: PI
   });
   this.addThing(sphere);
@@ -60,15 +50,33 @@ JoozbillWorld.prototype.populate = function() {
       ],
       color: [0, 1, 0, 1],
       velocity: [0, -10, 0],
-      // rYaw: PI/2,
       rRoll: Math.random() < .5 ? -PI : PI
     });
     this.addThing(star);
   }
 };
 
+
 JoozbillWorld.prototype.jerk = function(v) {
   for (var i = 0; i < this.things.size(); i++) {
     this.things.get(i).setVelocity(v);
   }
+};
+
+
+JoozbillWorld.prototype.onKey = function(event) {
+  var isKeydownEvent = event.type == 'keydown';
+  var keyCode = event.keyCode;
+
+  switch (keyCode) {
+    case KeyCode.F:
+      ContainerManager.getInstance().setFullScreen(true);
+      break;
+    case KeyCode.ESC:
+      Animator.getInstance().setPaused(true);
+      return false;
+    default:
+      return false;
+  }
+  return true;
 };

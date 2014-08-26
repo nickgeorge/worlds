@@ -4,18 +4,19 @@ HeroBall = function(message) {
   this.aMag = 20;
   this.moveKey = [0, 0];
 
-  world.addListeningThing(this);
+  this.inputAdapter = new WorldInputAdapter().
+      setKeyHandler(this.onKey, this);
 };
 util.inherits(HeroBall, Sphere);
 
 
 HeroBall.prototype.advance = function(dt) {
-
   this.velocity[0] += this.moveKey[0] * this.aMag*dt;
   this.velocity[1] += this.moveKey[1] * this.aMag*dt;
 
   this.advanceBasics(dt);
 
+  var world = Environment.getWorld();
   if (this.position[0] < -world.width / 2) {
     this.velocity[0] = Math.abs(this.velocity[0]);
     this.position[0] = -world.width/2;
@@ -41,19 +42,19 @@ HeroBall.prototype.onKey = function(event) {
   switch (keyCode) {
     case KeyCode.A:
       this.moveKey[0] = isKeydownEvent ? -1 :
-          (worldListener.keyMap[KeyCode.D] ? 1 : 0);
+          (this.inputAdapter.isKeyDown(KeyCode.D) ? 1 : 0);
       break;
     case KeyCode.D:
       this.moveKey[0] = isKeydownEvent ? 1 :
-          (worldListener.keyMap[KeyCode.A] ? -1 : 0);
+          (this.inputAdapter.isKeyDown(KeyCode.A) ? -1 : 0);
       break;
     case KeyCode.S:
       this.moveKey[1] = isKeydownEvent ? -1 :
-          (worldListener.keyMap[KeyCode.W] ? 1 : 0);
+          (this.inputAdapter.isKeyDown(KeyCode.W) ? 1 : 0);
       break;
     case KeyCode.W:
       this.moveKey[1] = isKeydownEvent ? 1 :
-          (worldListener.keyMap[KeyCode.S] ? -1 : 0);
+          (this.inputAdapter.isKeyDown(KeyCode.S) ? -1 : 0);
       break;
   }
 };

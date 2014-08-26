@@ -1,5 +1,5 @@
 Border = function(message) {
-  message.elementType = gl.LINE_LOOP;
+  message.elementType = GL.LINE_LOOP;
   util.base(this, message);
 
   this.bottomLeft = message.bottomLeft;
