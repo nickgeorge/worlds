@@ -7,7 +7,7 @@ HeroBall = function(message) {
   this.inputAdapter = new WorldInputAdapter().
       setKeyHandler(this.onKey, this);
 };
-util.inherits(HeroBall, Sphere);
+goog.inherits(HeroBall, Sphere);
 
 
 HeroBall.prototype.advance = function(dt) {
@@ -16,22 +16,21 @@ HeroBall.prototype.advance = function(dt) {
 
   this.advanceBasics(dt);
 
-  var world = Environment.getWorld();
-  if (this.position[0] < -world.width / 2) {
+  if (this.position[0] < -Env.world.width / 2) {
     this.velocity[0] = Math.abs(this.velocity[0]);
-    this.position[0] = -world.width/2;
+    this.position[0] = -Env.world.width/2;
   }
-  if (this.position[0] > world.width / 2) {
+  if (this.position[0] > Env.world.width / 2) {
     this.velocity[0] = -Math.abs(this.velocity[0]);
-    this.position[0] = world.width/2;
+    this.position[0] = Env.world.width/2;
   }
-  if (this.position[1] < -world.height / 2) {
+  if (this.position[1] < -Env.world.height / 2) {
     this.velocity[1] = Math.abs(this.velocity[1]);
-    this.position[1] = -world.height/2;
+    this.position[1] = -Env.world.height/2;
   }
-  if (this.position[1] > world.height / 2) {
+  if (this.position[1] > Env.world.height / 2) {
     this.velocity[1] = -Math.abs(this.velocity[1]);
-    this.position[1] = world.height/2;
+    this.position[1] = Env.world.height/2;
   }
 };
 

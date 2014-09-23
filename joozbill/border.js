@@ -7,7 +7,7 @@ Border = function(message) {
 
   this.createBuffers();
 };
-util.inherits(Border, EasyThing);
+goog.inherits(Border, EasyThing);
 
 Border.prototype.getVertexCoordinates = function() {
   return [

@@ -4,7 +4,7 @@ Star = function(message) {
   this.size = message.size || 5;
   this.createBuffers();
 };
-util.inherits(Star, EasyThing);
+goog.inherits(Star, EasyThing);
 
 Star.prototype.advance = function(dt) {
   this.advanceBasics(dt);
@@ -33,31 +33,31 @@ Star.prototype.getVertexCoordinates = function() {
     0, 0, 5,
     this.size, 0, 0,
     this.size/4, this.size/4, 0,
-    
+
     0, 0, 5,
     this.size/4, this.size/4, 0,
     0, this.size, 0,
-    
+
     0, 0, 5,
     0, this.size, 0,
     -this.size/4, this.size/4, 0,
-    
+
     0, 0, 5,
     -this.size/4, this.size/4, 0,
     -this.size, 0, 0,
-    
+
     0, 0, 5,
     -this.size, 0, 0,
     -this.size/4, -this.size/4, 0,
-    
+
     0, 0, 5,
     -this.size/4, -this.size/4, 0,
     0, -this.size, 0,
-    
+
     0, 0, 5,
     0, -this.size, 0,
     this.size/4, -this.size/4, 0,
-    
+
     0, 0, 5,
     this.size/4, -this.size/4, 0,
     this.size, 0, 0,
@@ -69,31 +69,31 @@ Star.prototype.getVertexNormals = function() {
     0, 0, 1,
     0.302,0.905,0.302,
     0.302,0.905,0.302,
-    
+
     0, 0, 1,
     0.905,0.302,0.302,
     0.905,0.302,0.302,
-    
+
     0, 0, 1,
     -0.905,0.302,0.302,
     -0.905,0.302,0.302,
-    
+
     0, 0, 1,
     -0.302,0.905,0.302,
     -0.302,0.905,0.302,
-    
+
     0, 0, 1,
     -0.302,-0.905,0.302,
     -0.302,-0.905,0.302,
-    
+
     0, 0, 1,
     -0.905,-0.302,0.302,
     -0.905,-0.302,0.302,
-    
+
     0, 0, 1,
     0.905,-0.302,0.302,
     0.905,-0.302,0.302,
-    
+
     0, 0, 1,
     0.302,-0.905,0.302,
     0.302,-0.905,0.302,

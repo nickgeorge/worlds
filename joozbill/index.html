@@ -1,12 +1,15 @@
+
 <html>
   <head>
     <title>Joozbill</title>
     <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
 
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="/smallworld/style.css" type="text/css" />
+    <link rel="stylesheet" href="/worldJs/style.css" type="text/css" />
+    <link rel="stylesheet" href="/worldJs/style.css" type="text/css" />
 
-    <script src="http://njpg.me/smallworld/small_world.js"></script>
+    <script src="/worldJS/gl-matrix.js"></script>
+    <script src="/worldJs/rootworld.js"></script>
     <script src="joozbill_world.js"></script>
     <script src="star.js"></script>
     <script src="hero_ball.js"></script>
@@ -15,24 +18,26 @@
     <script type="text/javascript">
 
       function init() {
-        var hudCanvas = document.getElementById('hud-canvas')
-        var glCanvas = document.getElementById('gl-canvas');
-        var gameDiv = document.getElementById('game-div');  
-
+        var gameDiv = document.getElementById('game-div');
         ContainerManager.initSingleton(gameDiv);
 
-        var gl = GL.createGLWithDefaultShaders(glCanvas);
-        var world = new JoozbillWorld();
+        var hudCanvas = document.getElementById('hud-canvas')
         var hud = new HUD(hudCanvas);
 
-        Environment.initEnvironment(world, hud, gl);
+        var glCanvas = document.getElementById('gl-canvas');
+        ShaderProgram.defaultDomain = '';
+        var gl = GL.createGLWithDefaultShaders(glCanvas);
 
         var resizer = new FullWindowResizer(gl, glCanvas, hud, hudCanvas);
-        window.addEventListener('resize',
-            util.bind(resizer.resize, resizer));
-        resizer.resize();
+        resizer.attachEventListener();
+
+        var world = new JoozbillWorld();
+        Env.setEnvironment(world, hud, gl);
+        Animator.initSingleton(world, hud);
 
         world.populate();
+        resizer.resize();
+        Animator.getInstance().setPaused(false);
         Animator.getInstance().start();
       }
     </script>

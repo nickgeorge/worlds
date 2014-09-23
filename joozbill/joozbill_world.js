@@ -12,7 +12,7 @@ JoozbillWorld = function() {
       setKeyHandler(this.onKey, this);
 
 };
-util.inherits(JoozbillWorld, World);
+goog.inherits(JoozbillWorld, World);
 
 
 JoozbillWorld.prototype.advance = function(dt) {
