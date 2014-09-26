@@ -6,6 +6,7 @@ OsterichMessage.read = function(reader) {
     alive: reader.readInt8(),
     position: reader.readVec3(),
     velocity: reader.readVec3(),
+    sledgeAngle: reader.readFloat32(),
   }
 };
 

@@ -1,43 +1,54 @@
 Dongle = function(message) {
+
   goog.base(this, message);
 
-  this.size = message.size || 5;
-
-  this.uScale = 5;
-
-  this.scale = vec3.fromValues(this.uScale, this.uScale, this.uScale);
-  // this.color = [0, 1, 0, 1];
-    this.color = [
-      Math.random(),
-      Math.random(),
-      Math.random(),
-      1
-    ];
   this.elementType = GL.TRIANGLES;
-  this.finalize();
+
+  this.color = [
+    Math.random(),
+    Math.random(),
+    Math.random(),
+    1
+  ]
+
+  this.bird = new DataThing({
+    position: [0, 0, 0],
+    data: OsterichData,
+    uScale: 5,
+    color: this.color,
+
+  });
+  var uScale = 5;
+  var scale = vec3.fromValues(uScale, uScale, uScale);
+  this.bird.scale = scale;
+
+
+  this.sledge = new DataThing({
+    data: SledgeData,
+    color: this.color,
+    yaw: Math.PI/2,
+    position: [0, -13, 0]
+
+  });
+
+  this.sledgeContainer = new OffsetContainer({
+    position: [-4, 15, 0],
+    thing: this.sledge,
+    pitch: 5*Math.PI/4,
+    // rPitch: Math.PI,
+  });
+  var uScale = 1.4;
+  var scale = vec3.fromValues(uScale, uScale, uScale);
+  this.sledge.scale = scale;
+
+
+  this.addPart(this.bird);
+  this.addPart(this.sledgeContainer);
 };
-goog.inherits(Dongle, LeafThing);
+goog.inherits(Dongle, Thing);
 
 Dongle.prototype.advance = function(dt) {
   this.advanceBasics(dt);
-
-  // if (Math.random() < .1) {
-  //   this.color = [
-  //     Math.random(),
-  //     Math.random(),
-  //     Math.random(),
-  //     1
-  //   ];
-
-  //   var speedX = Math.random() * 10;
-  //   var speedY = Math.sqrt(100 - speedX*speedX);
-
-  //   if (Math.random() < .5) speedX = -speedX;
-  //   if (Math.random() < .5) speedY = -speedY;
-
-  //   this.velocity[0] = speedX;
-  //   this.velocity[1] = speedY;
-  // }
   if (this.velocity[0] || this.velocity[1] || this.velocity[2]) {
     quat.rotationTo(this.upOrientation,
         [0, 0, 1],
@@ -48,31 +59,6 @@ Dongle.prototype.advance = function(dt) {
 Dongle.prototype.update = function(message) {
   this.velocity = message.velocity;
   this.position = message.position;
-};
-
-
-Dongle.positionBuffer = null;
-Dongle.prototype.getPositionBuffer = function() {
-  if (!Dongle.positionBuffer) {
-    Dongle.positionBuffer = Env.gl.generateBuffer(Data.vertexCoordinates, 3);
-  }
-  return Dongle.positionBuffer;
-};
-
-
-Dongle.normalBuffer = null;
-Dongle.prototype.getNormalBuffer = function() {
-  if (!Dongle.normalBuffer) {
-    Dongle.normalBuffer = Env.gl.generateBuffer(Data.normalCoordinates, 3);
-  }
-  return Dongle.normalBuffer;
-};
-
-Dongle.textureBuffer = null;
-Dongle.prototype.getTextureBuffer = function() {
-  if (!Dongle.textureBuffer) {
-    Dongle.textureBuffer = Env.gl.generateBuffer(Data.normalCoordinates, 3);
-  }
-  return Dongle.textureBuffer;
+  this.sledgeContainer.setPitchOnly(message.sledgeAngle);
 };
 

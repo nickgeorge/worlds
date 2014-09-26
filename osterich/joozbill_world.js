@@ -26,13 +26,13 @@ JoozbillWorld.prototype.populate = function() {
   var light = new Light({
     ambientColor: [.32, .32, .32],
     directionalColor: [.68, .68, .68],
-    position: [0, 100, 0]
+    position: [0, 80, 155]
   });
   this.addLight(light);
 
   var orientation = quat.create();
   this.camera = new FreeCamera({
-    position: [0, 100, 175],
+    position: [0, 80, 155],
     pitch: Math.PI/5,
     viewOrientation: quat.rotateY(orientation, orientation, 0),
   });
