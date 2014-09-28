@@ -13,10 +13,10 @@ Client.prototype.onMessage = function(message) {
   var code = reader.readInt32();
   // console.log(code);
   switch(code) {
-    // case MessageCode.SET_BOARD:
-    //   this.world.board = Board.fromMessage(new BoardMessage(reader));
-    //   reader.checkEOM();
-    //   break;
+    case MessageCode.SET_BOARD:
+      this.world.board = Board.fromMessage(new BoardMessage(reader));
+      reader.checkEOM();
+      break;
     case MessageCode.SET_STATE:
       console.log('Update Rec\'d');
       Env.world.setState(reader);

@@ -1,22 +1,14 @@
-Dongle = function(message) {
+Osterich = function(message) {
 
   goog.base(this, message);
 
   this.elementType = GL.TRIANGLES;
-
-  this.color = [
-    Math.random(),
-    Math.random(),
-    Math.random(),
-    1
-  ]
 
   this.bird = new DataThing({
     position: [0, 0, 0],
     data: OsterichData,
     uScale: 5,
     color: this.color,
-
   });
   var uScale = 5;
   var scale = vec3.fromValues(uScale, uScale, uScale);
@@ -41,24 +33,40 @@ Dongle = function(message) {
   var scale = vec3.fromValues(uScale, uScale, uScale);
   this.sledge.scale = scale;
 
+  // this.addPart(new Sphere({
+  //   radius: 1,
+  //   position: [-4, 10, 10],
+  //   color: [1, 0, 0, 1],
+  // }));
 
   this.addPart(this.bird);
   this.addPart(this.sledgeContainer);
 };
-goog.inherits(Dongle, Thing);
+goog.inherits(Osterich, Thing);
+Types.registerType(Osterich, OsterichTypes.OSTERICH);
 
-Dongle.prototype.advance = function(dt) {
+Osterich.prototype.advance = function(dt) {
   this.advanceBasics(dt);
-  if (this.velocity[0] || this.velocity[1] || this.velocity[2]) {
-    quat.rotationTo(this.upOrientation,
-        [0, 0, 1],
-        vec3.normalize([], this.velocity));
+};
+
+Osterich.prototype.update = function(message) {
+  this.velocity = message.velocity;
+  this.position = message.position;
+  this.upOrientation = message.upOrientation;
+  this.sledgeContainer.setPitchOnly(message.sledgeAngle);
+};
+
+
+Osterich.readMessage = function(reader) {
+  return {
+    klass: Osterich,
+    alive: reader.readInt8(),
+    position: reader.readVec3(),
+    velocity: reader.readVec3(),
+    upOrientation: reader.readVec4(),
+    color: reader.readVec4(),
+    sledgeAngle: reader.readFloat32(),
   }
 };
 
-Dongle.prototype.update = function(message) {
-  this.velocity = message.velocity;
-  this.position = message.position;
-  this.sledgeContainer.setPitchOnly(message.sledgeAngle);
-};
 

@@ -3,10 +3,9 @@ JoozbillWorld = function() {
 
   this.setBackgroundColor([0, 0, 0, 1]);
 
-  this.thingsById = {};
-
 
   this.inputAdapter = new WorldInputAdapter().
+      setMouseButtonHandler(this.onMouseButton, this).
       setKeyHandler(this.onKey, this);
 
 };
@@ -32,11 +31,16 @@ JoozbillWorld.prototype.populate = function() {
 
   var orientation = quat.create();
   this.camera = new FreeCamera({
-    position: [0, 80, 155],
-    pitch: Math.PI/5,
+    position: [0, 100, 200],
+    pitch: Math.PI/6,
     viewOrientation: quat.rotateY(orientation, orientation, 0),
   });
   this.addThing(this.camera);
+
+  // this.
+
+  this.addThing(new Box({color: [.7, .7, 1, 1], size: [200, 0, 200]}));
+  // this.addThing(new Fella({color: [1, 1, 1, 1], position: [0, 0, 0]}));
 
 
   // for (var i = 0; i < 1; i++) {
@@ -88,48 +92,3 @@ JoozbillWorld.prototype.onKey = function(event) {
     }
   }
 };
-
-
-JoozbillWorld.prototype.setState = function(reader) {
-  for (var i = 0; i < 1; i++) {
-    AddRemoveMessage.read(reader, this.things);
-    reader.checkSync();
-    var writablesCount = reader.readInt32();
-    // console.log('Count: ' + writablesCount);
-    for (var j = 0; j < writablesCount; j++) {
-      var id = reader.readInt32();
-      this.addThing(reader.readThing().setId(id));
-    }
-    if (i < 2) reader.checkSync();
-  }
-  this.stateSet = true;
-};
-
-JoozbillWorld.prototype.updateWorld = function(reader) {
-  for (var i = 0; i < 1; i++) {
-    AddRemoveMessage.read(reader, this.things);
-    reader.checkSync();
-    var writablesCount = reader.readInt32();
-    for (var j = 0; j < writablesCount; j++) {
-      var id = reader.readInt32();
-      var message = reader.readThingMessage();
-      var thing = this.getThing(id);
-      if (thing) thing.update(message);
-      else {
-      }
-    }
-    if (i < 1) reader.checkSync();
-  }
-
-
-  if (this.heroId && !hero) {
-    hero = this.thingsById[this.heroId];
-    if (hero) {
-      camera.anchor = hero;
-    }
-  }
-};
-
-JoozbillWorld.prototype.getThing = function(id) {
-  return this.thingsById[id];
-}
