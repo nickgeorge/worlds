@@ -86,6 +86,10 @@ JoozbillWorld.prototype.onKey = function(event) {
         this.setMusicPaused(!this.music.paused);
         break;
 
+      case KeyCode.P:
+        Env.client.sendCode(MessageCode.RESTART);
+        break;
+
       case KeyCode.ESC:
         Animator.getInstance().setPaused(true);
         break
