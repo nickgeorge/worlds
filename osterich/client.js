@@ -86,6 +86,5 @@ Client.prototype.myNameIs = function(name) {
 
 Client.prototype.onOpen = function() {
   console.log("Opened!");
-  // this.sendCode(MessageCode.GET_BOARD);
   this.sendCode(MessageCode.JOIN);
 };
