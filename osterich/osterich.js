@@ -9,35 +9,23 @@ Osterich = function(message) {
     data: OsterichData,
     uScale: 5,
     color: this.color,
+    // texture: Math.random() > .5 ? null : Textures.get(TextureList.OSTRICH),
   });
-  var uScale = 5;
-  var scale = vec3.fromValues(uScale, uScale, uScale);
-  this.bird.scale = scale;
 
 
   this.sledge = new DataThing({
     data: SledgeData,
     color: this.color,
     yaw: Math.PI/2,
+    uScale: 1.4,
     position: [0, -13, 0]
-
   });
 
   this.sledgeContainer = new OffsetContainer({
     position: [-4, 15, 0],
     thing: this.sledge,
     pitch: 5*Math.PI/4,
-    // rPitch: Math.PI,
   });
-  var uScale = 1.4;
-  var scale = vec3.fromValues(uScale, uScale, uScale);
-  this.sledge.scale = scale;
-
-  // this.addPart(new Sphere({
-  //   radius: 1,
-  //   position: [-4, 10, 10],
-  //   color: [1, 0, 0, 1],
-  // }));
 
   this.addPart(this.bird);
   this.addPart(this.sledgeContainer);
@@ -54,6 +42,7 @@ Osterich.prototype.update = function(message) {
   this.position = message.position;
   this.upOrientation = message.upOrientation;
   this.sledgeContainer.setPitchOnly(message.sledgeAngle);
+  // this.setColor([1, 1, 1, 1]);
 };
 
 

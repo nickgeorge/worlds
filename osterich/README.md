@@ -1,4 +1,4 @@
-stars
+osterich
 =====
 
-woah, dude.
+Osterich-smashing good time.

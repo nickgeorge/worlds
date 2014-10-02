@@ -30,15 +30,6 @@ Fella.MAX_LEG_ANGLE = Math.PI/6;
 
 Fella.prototype.advance = function(dt) {
   this.advanceBasics(dt);
-  // if (this.velocity[0] || this.velocity[1] || this.velocity[2]) {
-  //   quat.rotationTo(this.upOrientation,
-  //       [0, 0, 1],
-  //       vec3.normalize([], this.velocity));
-  // }
-  // if (!this.alive) return;
-  // // if (Math.random() < .02) {
-  // //   this.rYaw = Math.random()*2 - 1;
-  // // }
   if (!this.alive) return;
   this.legAngle += this.speed * this.stepDirection * dt;
 
@@ -153,17 +144,8 @@ Fella.prototype.buildBody = function() {
 };
 
 
-Fella.prototype.setColor = function(color) {
-  this.color = color;
-  this.eachPartRecursive(function(part) {
-    part.color = color;
-  });
-};
-
-
 Fella.prototype.update = function(message) {
   if  (this.alive && !message.alive) {
-    console.log("here");
     this.die();
   }
   this.position = message.position;

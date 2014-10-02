@@ -1,5 +1,7 @@
 goog.provide('OsterichMessage');
+
 OsterichMessage = {};
+
 OsterichMessage.read = function(reader) {
   return {
     klass: Dongle,

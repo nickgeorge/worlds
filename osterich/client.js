@@ -5,41 +5,39 @@ Client = function(world) {
   this.socket.onmessage = util.bind(this.onMessage);
   this.socket.binaryType = 'arraybuffer';
   this.socket.onopen = util.bind(this.onOpen, this);
+
+
+  window.onbeforeunload = util.bind(function() {
+    this.socket.close()
+  }, this);
 };
 
 Client.prototype.onMessage = function(message) {
   reader = new Reader(message.data);
 
   var code = reader.readInt32();
-  // console.log(code);
   switch(code) {
-    case MessageCode.SET_BOARD:
-      this.world.board = Board.fromMessage(new BoardMessage(reader));
-      reader.checkEOM();
-      break;
     case MessageCode.SET_STATE:
-      console.log('Update Rec\'d');
       Env.world.setState(reader);
       reader.checkEOM();
       Env.world.stateSet = true;
       break;
     case MessageCode.UPDATE_WORLD:
-      // console.log("world");
       if (Env.world.stateSet) {
         Env.world.updateWorld(reader);
         reader.checkEOM();
       }
       break;
-    case MessageCode.YOU_ARE:
-      var heroId = reader.readInt32();
-      reader.checkEOM();
-
-
+    case MessageCode.UPDATE_WORLD:
+      if (Env.world.stateSet) {
+        Env.world.updateWorld(reader);
+        reader.checkEOM();
+      }
       break;
-    // case MessageCode.SCORE:
-    //   this.world.scoresMap = new ScoreMessage(reader).scoresMap;
-    //   reader.checkEOM();
-    //   break;
+    case MessageCode.SCORE:
+      Env.world.scoreMap = ScoreMessage.read(reader);
+      reader.checkEOM();
+      break;
     // case MessageCode.NAME_MAP:
     //   this.world.nameMap = new NameMapMessage(reader).nameMap;
     //   reader.checkEOM();
@@ -85,6 +83,5 @@ Client.prototype.myNameIs = function(name) {
 };
 
 Client.prototype.onOpen = function() {
-  console.log("Opened!");
   this.sendCode(MessageCode.JOIN);
 };
