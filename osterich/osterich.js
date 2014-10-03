@@ -59,3 +59,7 @@ Osterich.readMessage = function(reader) {
 };
 
 
+Osterich.prototype.getEyePosition = function(out) {
+  return vec3.copy(out, this.position);
+};
+
