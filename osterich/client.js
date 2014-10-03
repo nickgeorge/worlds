@@ -38,10 +38,10 @@ Client.prototype.onMessage = function(message) {
       Env.world.scoreMap = ScoreMessage.read(reader);
       reader.checkEOM();
       break;
-    // case MessageCode.NAME_MAP:
-    //   this.world.nameMap = new NameMapMessage(reader).nameMap;
-    //   reader.checkEOM();
-    //   break;
+    case MessageCode.NAME_MAP:
+      Env.world.nameMap = NameMapMessage.read(reader);
+      reader.checkEOM();
+      break;
   }
 };
 
@@ -79,7 +79,14 @@ Client.prototype.myNameIs = function(name) {
   var writer = new Writer(1 + name.length);
   writer.writeInt8(MessageCode.MY_NAME_IS);
   writer.writeString(name);
-  this.send(byteArray.byteView);
+  // writer.writeInt8(97);
+  this.send(new Int8Array(writer.buffer));
+
+  // var ab = new ArrayBuffer(2);
+  // var dataView = new DataView(ab);
+  // dataView.setInt8(0, MessageCode.MY_NAME_IS);
+  // dataView.setInt8(1, 97);
+  // this.send(new Int8Array(ab));
 };
 
 Client.prototype.onOpen = function() {

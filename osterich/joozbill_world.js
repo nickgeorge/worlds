@@ -1,7 +1,8 @@
 JoozbillWorld = function() {
   goog.base(this);
 
-  this.scoreMap = {};
+  this.scoreMap = [];
+  this.nameMap = {};
 
   this.setBackgroundColor([0, 0, 0, 1]);
 
@@ -49,6 +50,11 @@ JoozbillWorld.prototype.onKey = function(event) {
 
       case KeyCode.P:
         Env.client.sendCode(MessageCode.RESTART);
+        break;
+
+      case KeyCode.N:
+        var name = prompt('Vas ist Dien Namen?!');
+        if (name) Env.client.myNameIs(name);
         break;
 
       case KeyCode.ESC:

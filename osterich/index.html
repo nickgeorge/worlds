@@ -8,6 +8,7 @@
 
     <script src="/worldJS/gl-matrix.js"></script>
     <script src="/worldJS/rootworld.js"></script>
+    <script src="hud/score_card.js"></script>
     <script src="texture_list.js"></script>
     <script src="joozbill_world.js"></script>
     <script src="osterich_types.js"></script>
@@ -19,6 +20,7 @@
     <script src="messages/ostrich_message.js"></script>
     <script src="messages/star_message.js"></script>
     <script src="messages/score_message.js"></script>
+    <script src="messages/name_map_message.js"></script>
     <script src="client.js"></script>
 
 
@@ -29,13 +31,7 @@
 
         var hudCanvas = document.getElementById('hud-canvas')
         var hud = new HUD(hudCanvas).
-            addWidget(new UpdatingWriter(25, 25, function() {
-              var str = '';
-              for (var id in Env.world.scoreMap) {
-                str += id + ': ' + Env.world.scoreMap[id] + ' | ';
-              }
-              return str;
-            })).
+            addWidget(new ScoreCard(25, 25)).
             addWidget(new Fraps(-100, 25));
 
         var glCanvas = document.getElementById('gl-canvas');

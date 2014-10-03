@@ -42,7 +42,7 @@ Osterich.prototype.update = function(message) {
   this.position = message.position;
   this.upOrientation = message.upOrientation;
   this.sledgeContainer.setPitchOnly(message.sledgeAngle);
-  // this.setColor([1, 1, 1, 1]);
+  this.setColor(message.color);
 };
 
 
