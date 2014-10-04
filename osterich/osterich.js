@@ -1,30 +1,36 @@
 Osterich = function(message) {
-
   goog.base(this, message);
 
   this.elementType = GL.TRIANGLES;
+
+  // this.viewOrientation = quat.rotateY(quat.create(),
+  //     quat.create(), Math.PI);
+
+  this.viewOrientation = quat.create();
 
   this.bird = new DataThing({
     position: [0, 0, 0],
     data: OsterichData,
     uScale: 5,
     color: this.color,
+    yaw: Math.PI,
     // texture: Math.random() > .5 ? null : Textures.get(TextureList.OSTRICH),
   });
+
+  this.eyeOffset = [0, 13, 2];
 
 
   this.sledge = new DataThing({
     data: SledgeData,
     color: this.color,
-    yaw: Math.PI/2,
     uScale: 1.4,
-    position: [0, -13, 0]
+    position: [0, -13, 0],
+    yaw: Math.PI/2,
   });
 
   this.sledgeContainer = new OffsetContainer({
-    position: [-4, 15, 0],
+    position: [4, 13, 0],
     thing: this.sledge,
-    pitch: 5*Math.PI/4,
   });
 
   this.addPart(this.bird);
@@ -42,7 +48,7 @@ Osterich.prototype.update = function(message) {
   this.position = message.position;
   this.upOrientation = message.upOrientation;
   this.sledgeContainer.setPitchOnly(message.sledgeAngle);
-  this.setColor(message.color);
+  // this.setColor(message.color);
 };
 
 
@@ -60,6 +66,14 @@ Osterich.readMessage = function(reader) {
 
 
 Osterich.prototype.getEyePosition = function(out) {
-  return vec3.copy(out, this.position);
+  return vec3.add(out, this.position,
+      vec3.transformQuat([], this.eyeOffset, this.upOrientation));
 };
 
+
+
+Osterich.prototype.getViewOrientation = function(out) {
+  return quat.multiply(out, this.upOrientation,
+      this.viewOrientation);
+  // return quat.copy(out, this.upOrientation);
+};

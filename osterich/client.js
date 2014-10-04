@@ -15,34 +15,42 @@ Client = function(world) {
 Client.prototype.onMessage = function(message) {
   reader = new Reader(message.data);
 
+  var checkEOM = true;
+
   var code = reader.readInt32();
   switch(code) {
     case MessageCode.SET_STATE:
       Env.world.setState(reader);
-      reader.checkEOM();
       Env.world.stateSet = true;
       break;
     case MessageCode.UPDATE_WORLD:
       if (Env.world.stateSet) {
         Env.world.updateWorld(reader);
-        reader.checkEOM();
+      } else {
+        checkEOM = false;
       }
       break;
     case MessageCode.UPDATE_WORLD:
       if (Env.world.stateSet) {
         Env.world.updateWorld(reader);
-        reader.checkEOM();
+      } else {
+        checkEOM = false;
       }
       break;
     case MessageCode.SCORE:
       Env.world.scoreMap = ScoreMessage.read(reader);
-      reader.checkEOM();
       break;
     case MessageCode.NAME_MAP:
       Env.world.nameMap = NameMapMessage.read(reader);
-      reader.checkEOM();
       break;
+    case MessageCode.YOU_ARE:
+      Env.world.hero = Env.world.getThing(reader.readInt32());
+      break;
+    default:
+      console.log('Unrecognized code: ' + code);
+      checkEOM = false;
   }
+  if (checkEOM) reader.checkEOM();
 };
 
 Client.prototype.send = function(msg) {
@@ -79,14 +87,7 @@ Client.prototype.myNameIs = function(name) {
   var writer = new Writer(1 + name.length);
   writer.writeInt8(MessageCode.MY_NAME_IS);
   writer.writeString(name);
-  // writer.writeInt8(97);
   this.send(new Int8Array(writer.buffer));
-
-  // var ab = new ArrayBuffer(2);
-  // var dataView = new DataView(ab);
-  // dataView.setInt8(0, MessageCode.MY_NAME_IS);
-  // dataView.setInt8(1, 97);
-  // this.send(new Int8Array(ab));
 };
 
 Client.prototype.onOpen = function() {
