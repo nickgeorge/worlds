@@ -41,12 +41,14 @@ Types.registerType(Osterich, OsterichTypes.OSTERICH);
 
 Osterich.prototype.advance = function(dt) {
   this.advanceBasics(dt);
+  // this.sledgeContainer.advance(dt);
 };
 
 Osterich.prototype.update = function(message) {
   this.velocity = message.velocity;
   this.position = message.position;
   this.upOrientation = message.upOrientation;
+  this.viewOrientation = message.viewOrientation;
   this.sledgeContainer.setPitchOnly(message.sledgeAngle);
   // this.setColor(message.color);
 };
@@ -60,6 +62,7 @@ Osterich.readMessage = function(reader) {
     velocity: reader.readVec3(),
     upOrientation: reader.readVec4(),
     color: reader.readVec4(),
+    viewOrientation: reader.readVec4(),
     sledgeAngle: reader.readFloat32(),
   }
 };

@@ -25,13 +25,22 @@ Fella = function(message) {
 goog.inherits(Fella, Thing);
 Types.registerType(Fella, OsterichTypes.FELLA);
 
-Fella.MAX_LEG_ANGLE = Math.PI/8;
+Fella.MAX_LEG_ANGLE = Math.PI/6;
 
 
 Fella.prototype.advance = function(dt) {
   this.advanceBasics(dt);
-  if (!this.alive) return;
-  this.legAngle += this.stepDirection * dt;
+  if (!this.alive) {
+    this.eachPart(function(part) {
+      if (part.position[1] < 0) {
+        vec3.set(part.velocity, 0, 0, 0);
+        vec3.set(part.acceleration, 0, 0, 0);
+        part.position[1] = .1;
+      }
+    });
+    return;
+  };
+  this.legAngle += this.stepDirection * dt* 3;
 
   if (this.legAngle >= Fella.MAX_LEG_ANGLE) {
     this.stepDirection = -1;
@@ -62,6 +71,7 @@ Fella.prototype.die = function() {
     part.isStatic = false;
     var vTheta = Math.random()*2*Math.PI;
     vec3.random(part.velocity, this.deathSpeed);
+    part.acceleration[1] = -40;
   });
   Env.world.effects.remove(this.healthBar);
 };
