@@ -10,6 +10,7 @@ OsterichWorld = function() {
   this.inputAdapter = new WorldInputAdapter().
       setMouseMoveHandler(this.onMouseMove, this).
       setMouseButtonHandler(this.onMouseButton, this).
+      setPointerLockChangeHandler(this.onPointerLockChange, this).
       setKeyHandler(this.onKey, this);
 
   this.freeCamera = null;
@@ -121,7 +122,7 @@ OsterichWorld.prototype.onMouseMove = function(event) {
 
 
 OsterichWorld.prototype.onMouseButton = function(event) {
-  if (!this.inputAdapter.isPointerLocked()) {
+  if (!this.inputAdapter.isPointerLocked() && this.camera == this.fpsCamera) {
     ContainerManager.getInstance().setPointerLock(true);
     Animator.getInstance().setPaused(false);
   }

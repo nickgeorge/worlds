@@ -32,10 +32,10 @@ Fella.prototype.advance = function(dt) {
   this.advanceBasics(dt);
   if (!this.alive) {
     this.eachPart(function(part) {
-      if (part.position[1] < 0) {
+      if (part.position[1] < .9) {
         vec3.set(part.velocity, 0, 0, 0);
         vec3.set(part.acceleration, 0, 0, 0);
-        part.position[1] = .1;
+        part.position[1] = 1;
       }
     });
     return;
@@ -73,6 +73,9 @@ Fella.prototype.die = function() {
     vec3.random(part.velocity, this.deathSpeed);
     part.acceleration[1] = -40;
   });
+  quat.rotateZ(this.head.upOrientation,
+      this.head.upOrientation,
+      (Math.random() * 2 - 1) * Math.PI/3)
   Env.world.effects.remove(this.healthBar);
 };
 
