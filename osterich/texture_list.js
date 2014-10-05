@@ -4,6 +4,7 @@ goog.provide('TextureList');
 var textureRoot_ = 'data/';
 
 TextureList = {
-  OSTRICH: textureRoot_ + 'Ostrich_D.png',
+  // OSTRICH: textureRoot_ + 'Ostrich_D.png',
+  GRASS: textureRoot_ + 'grass.png',
 };
 

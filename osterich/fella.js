@@ -25,13 +25,13 @@ Fella = function(message) {
 goog.inherits(Fella, Thing);
 Types.registerType(Fella, OsterichTypes.FELLA);
 
-Fella.MAX_LEG_ANGLE = Math.PI/6;
+Fella.MAX_LEG_ANGLE = Math.PI/8;
 
 
 Fella.prototype.advance = function(dt) {
   this.advanceBasics(dt);
   if (!this.alive) return;
-  this.legAngle += this.speed * this.stepDirection * dt;
+  this.legAngle += this.stepDirection * dt;
 
   if (this.legAngle >= Fella.MAX_LEG_ANGLE) {
     this.stepDirection = -1;

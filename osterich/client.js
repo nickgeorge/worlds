@@ -61,6 +61,20 @@ Client.prototype.sendCode = function(code) {
   this.send(new Uint8Array([code]));
 };
 
+Client.prototype.sendEOM = function() {
+  this.sendCode(MessageCode.EOM);
+};
+
+Client.prototype.sendMode = function(mode) {
+  console.log(mode);
+  var ab = new ArrayBuffer(8);
+  var dataView = new DataView(ab);
+  dataView.setInt8(0, MessageCode.MODE);
+  dataView.setInt32(1, mode);
+  this.send(new Int8Array(ab));
+  //TODO EOM
+};
+
 Client.prototype.sendKeyEvent = function(isKeyDown, keyCode) {
   this.send(new Uint8Array(
       [MessageCode.KEY_EVENT, isKeyDown ? 1 : 0, keyCode]));

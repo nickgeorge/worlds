@@ -22,12 +22,12 @@ goog.inherits(OsterichWorld, World);
 OsterichWorld.prototype.populate = function() {
   goog.base(this, 'populate');
 
-  var light = new Light({
-    ambientColor: [.32, .32, .32],
+  this.light = new Light({
+    ambientColor: [.4, .4, .4],
     directionalColor: [.68, .68, .68],
-    position: [0, 80, 176]
+    position: [0, 130, 175]
   });
-  this.addLight(light);
+  this.addLight(this.light);
 
   var orientation = quat.create();
   this.freeCamera = new FreeCamera({
@@ -40,7 +40,12 @@ OsterichWorld.prototype.populate = function() {
 
   this.camera = this.freeCamera;
 
-  this.addThing(new Box({color: [.7, .7, 1, 1], size: [200, 0, 200]}));
+  this.addThing(new Box({
+    color: [.7, .7, 1, 1],
+    size: [200, 0, 200],
+    texture: Textures.get(TextureList.GRASS),
+    textureCounts: [30, 30]
+  }));
 };
 
 
@@ -71,8 +76,14 @@ OsterichWorld.prototype.onKey = function(event) {
       case KeyCode.I:
         if (this.camera == this.freeCamera) {
           this.goFps();
+          ContainerManager.getInstance().setPointerLock(true);
+          Env.world.hero.bird.visible = false;
+          Env.client.sendMode(1);
         } else {
           this.goFree();
+          ContainerManager.getInstance().setPointerLock(false);
+          Env.world.hero.bird.visible = true;
+          Env.client.sendMode(0);
         }
         break;
 
@@ -85,7 +96,7 @@ OsterichWorld.prototype.onKey = function(event) {
 
 
 OsterichWorld.prototype.onMouseMove = function(event) {
-  if (this.rotating) return;
+  if (this.camera == this.freeCamera) return;
   var movementX = this.inputAdapter.getMovementX(event);
   var movementY = this.inputAdapter.getMovementY(event);
 
@@ -120,8 +131,10 @@ OsterichWorld.prototype.onMouseButton = function(event) {
 OsterichWorld.prototype.goFps = function(anchor) {
   this.fpsCamera.anchor = this.hero;
   this.camera = this.fpsCamera;
+  this.light.position[2] = 0;
 };
 
 OsterichWorld.prototype.goFree = function() {
   this.camera = this.freeCamera;
+  this.light.position[2] = 175;
 };
