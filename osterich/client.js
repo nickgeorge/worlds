@@ -17,18 +17,11 @@ Client.prototype.onMessage = function(message) {
 
   var checkEOM = true;
 
-  var code = reader.readInt32();
+  var code = reader.readInt8();
   switch(code) {
     case MessageCode.SET_STATE:
       Env.world.setState(reader);
       Env.world.stateSet = true;
-      break;
-    case MessageCode.UPDATE_WORLD:
-      if (Env.world.stateSet) {
-        Env.world.updateWorld(reader);
-      } else {
-        checkEOM = false;
-      }
       break;
     case MessageCode.UPDATE_WORLD:
       if (Env.world.stateSet) {

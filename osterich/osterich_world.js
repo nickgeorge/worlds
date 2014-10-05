@@ -10,7 +10,7 @@ OsterichWorld = function() {
   this.inputAdapter = new WorldInputAdapter().
       setMouseMoveHandler(this.onMouseMove, this).
       setMouseButtonHandler(this.onMouseButton, this).
-      setPointerLockChangeHandler(this.onPointerLockChange, this).
+      // setPointerLockChangeHandler(this.onPointerLockChange, this).
       setKeyHandler(this.onKey, this);
 
   this.freeCamera = null;
