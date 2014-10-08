@@ -1,6 +1,8 @@
 Client = function(world) {
   this.world = world;
-  this.socket = new WebSocket('ws://' + window.location.host + ':8080/websock');
+  // this.host = window.location.host
+  this.host = 'www.biologicalspeculation.com';
+  this.socket = new WebSocket('ws://' + this.host + ':8080/websock');
 
   this.socket.onmessage = util.bind(this.onMessage);
   this.socket.binaryType = 'arraybuffer';
@@ -11,6 +13,8 @@ Client = function(world) {
     this.socket.close()
   }, this);
 };
+
+var updateRate = new Framerate();
 
 Client.prototype.onMessage = function(message) {
   reader = new Reader(message.data);
@@ -24,11 +28,14 @@ Client.prototype.onMessage = function(message) {
       Env.world.stateSet = true;
       break;
     case MessageCode.UPDATE_WORLD:
+      var t = new Date().getTime()
       if (Env.world.stateSet) {
         Env.world.updateWorld(reader);
       } else {
         checkEOM = false;
       }
+      updateRate.snapshot();
+      // console.log(message.data.byteLength);
       break;
     case MessageCode.SCORE:
       Env.world.scoreMap = ScoreMessage.read(reader);
@@ -59,7 +66,6 @@ Client.prototype.sendEOM = function() {
 };
 
 Client.prototype.sendMode = function(mode) {
-  console.log(mode);
   var ab = new ArrayBuffer(8);
   var dataView = new DataView(ab);
   dataView.setInt8(0, MessageCode.MODE);
@@ -74,11 +80,11 @@ Client.prototype.sendKeyEvent = function(isKeyDown, keyCode) {
 };
 
 Client.prototype.sendMouseMoveEvent = function(dX, dY) {
-  var ab = new ArrayBuffer(9);
+  var ab = new ArrayBuffer(3);
   var dataView = new DataView(ab);
   dataView.setInt8(0, MessageCode.MOUSE_MOVE_EVENT);
-  dataView.setFloat32(1, dX);
-  dataView.setFloat32(5, dY);
+  dataView.setInt8(1, dX);
+  dataView.setInt8(2, dY);
   this.send(new Int8Array(ab));
 };
 
