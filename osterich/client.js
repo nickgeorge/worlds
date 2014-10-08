@@ -15,7 +15,7 @@ Client = function(world) {
 };
 
 var updateRate = new Framerate();
-
+var t0 = 0;
 Client.prototype.onMessage = function(message) {
   reader = new Reader(message.data);
 
@@ -34,8 +34,11 @@ Client.prototype.onMessage = function(message) {
       } else {
         checkEOM = false;
       }
-      updateRate.snapshot();
-      // console.log(message.data.byteLength);
+      // updateRate.snapshot();
+      Env.world.draw();
+      // var t1 = new Date().getTime();
+      // console.log((t1 - t0) + " : " + message.data.byteLength);
+      // t0 = t1;
       break;
     case MessageCode.SCORE:
       Env.world.scoreMap = ScoreMessage.read(reader);
