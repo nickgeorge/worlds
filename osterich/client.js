@@ -24,11 +24,16 @@ Client.prototype.onMessage = function(message) {
   var code = reader.readInt8();
   switch(code) {
     case MessageCode.SET_STATE:
+      var serverTime = reader.readInt32();
+      reader.checkSync();
       Env.world.setState(reader);
       Env.world.stateSet = true;
       break;
     case MessageCode.UPDATE_WORLD:
-      var t = new Date().getTime()
+      var t = new Date().getTime();
+      var serverTime = reader.readInt32();
+      reader.checkSync();
+      // console.log(t % 5000 - serverTime);
       if (Env.world.stateSet) {
         Env.world.updateWorld(reader);
       } else {
