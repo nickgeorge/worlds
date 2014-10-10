@@ -25,6 +25,17 @@
 
 
     <script type="text/javascript">
+
+        Animator.prototype.tick = function() {
+          window.requestAnimationFrame(this.boundTick);
+          if (this.paused) {
+            this.hud.render();
+            return;
+          }
+          this.advanceWorld();
+          // this.drawScene();
+          this.hud.render();
+        };
       function init() {
         var gameDiv = document.getElementById('game-div');
         ContainerManager.initSingleton(gameDiv);
