@@ -1,7 +1,7 @@
 Client = function(world) {
   this.world = world;
-  // this.host = window.location.host
-  this.host = 'www.biologicalspeculation.com';
+  this.host = window.location.host
+  // this.host = 'www.biologicalspeculation.com';
   this.socket = new WebSocket('ws://' + this.host + ':8080/websock');
 
   this.socket.onmessage = util.bind(this.onMessage);
@@ -54,6 +54,12 @@ Client.prototype.onMessage = function(message) {
     case MessageCode.YOU_ARE:
       Env.world.hero = Env.world.getThing(reader.readInt32());
       break;
+    case MessageCode.BROADCAST:
+      var id = reader.readInt32();
+      var message = reader.readString();
+      var name = Env.world.nameMap[id] || ('Player ' + id);
+      Env.hud.logger.log(name + ': ' + message);
+      break;
     default:
       console.log('Unrecognized code: ' + code);
       checkEOM = false;
@@ -79,7 +85,6 @@ Client.prototype.sendMode = function(mode) {
   dataView.setInt8(0, MessageCode.MODE);
   dataView.setInt32(1, mode);
   this.send(new Int8Array(ab));
-  //TODO EOM
 };
 
 Client.prototype.sendKeyEvent = function(isKeyDown, keyCode) {
@@ -108,7 +113,14 @@ Client.prototype.myNameIs = function(name) {
   var writer = new Writer(1 + name.length);
   writer.writeInt8(MessageCode.MY_NAME_IS);
   writer.writeString(name);
-  this.send(new Int8Array(writer.buffer));
+  this.send(writer.getBytes());
+};
+
+Client.prototype.say = function(msg) {
+  var writer = new Writer(1 + msg.length);
+  writer.writeInt8(MessageCode.SAY);
+  writer.writeString(msg);
+  this.send(writer.getBytes());
 };
 
 Client.prototype.onOpen = function() {

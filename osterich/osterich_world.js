@@ -70,8 +70,15 @@ OsterichWorld.prototype.onKey = function(event) {
         break;
 
       case KeyCode.N:
-        var name = prompt('What\'s your name?');
-        if (name) Env.client.myNameIs(name);
+        PromptBox.ask('What\'s your name?', function(name) {
+          if (name) Env.client.myNameIs(name);
+        });
+        break;
+
+      case KeyCode.ENTER:
+        PromptBox.ask('Speak:', function(msg) {
+          if (msg) Env.client.say(msg);
+        });
         break;
 
       case KeyCode.I:
@@ -138,4 +145,9 @@ OsterichWorld.prototype.goFps = function(anchor) {
 OsterichWorld.prototype.goFree = function() {
   this.camera = this.freeCamera;
   this.light.position[2] = 175;
+};
+
+
+OsterichWorld.prototype.getPlayerColor = function(id) {
+  return this.getThing(id).color;
 };
