@@ -96,7 +96,7 @@ OsterichWorld.prototype.onKey = function(event) {
         break;
 
       case KeyCode.ESC:
-        Animator.getInstance().togglePause();
+        // Animator.getInstance().togglePause();
         break
     }
   }
@@ -132,7 +132,12 @@ OsterichWorld.prototype.onMouseButton = function(event) {
   if (!this.inputAdapter.isPointerLocked() && this.camera == this.fpsCamera) {
     ContainerManager.getInstance().setPointerLock(true);
     Animator.getInstance().setPaused(false);
-  }
+  } else {
+    Env.client.sendKeyEvent(event.type == 'mousedown',
+        event.button == 0 ?
+            MessageCode.LEFT_CLICK_EVENT :
+            MessageCode.RIGHT_CLICK_EVENT);
+  };
 };
 
 

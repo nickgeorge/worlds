@@ -75,8 +75,11 @@ Osterich.prototype.getEyePosition = function(out) {
 
 
 
-Osterich.prototype.getViewOrientation = function(out) {
-  return quat.multiply(out, this.upOrientation,
-      this.viewOrientation);
-  // return quat.copy(out, this.upOrientation);
-};
+
+Osterich.prototype.getViewOrientation = function() {
+  var result = quat.create();
+  return function() {
+    return quat.multiply(result, this.upOrientation,
+        this.viewOrientation);
+  };
+}();

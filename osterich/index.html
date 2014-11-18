@@ -8,7 +8,6 @@
 
     <script src="/worldJS/gl-matrix.js"></script>
     <script src="/worldJS/rootworld.js"></script>
-    <script src="hud/score_card.js"></script>
     <script src="texture_list.js"></script>
     <script src="osterich_world.js"></script>
     <script src="osterich_types.js"></script>
@@ -19,9 +18,6 @@
     <script src="data/sledge_data.js"></script>
     <script src="messages/ostrich_message.js"></script>
     <script src="messages/star_message.js"></script>
-    <script src="messages/score_message.js"></script>
-    <script src="messages/name_map_message.js"></script>
-    <script src="client.js"></script>
 
 
     <script type="text/javascript">
@@ -58,7 +54,7 @@
         Animator.initSingleton(world, hud);
         Textures.initTextures(TextureList);
 
-        Env.client = new Client(world);
+        Env.client = new Client(world, 8080);
 
         world.populate();
         resizer.resize();
